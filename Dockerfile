@@ -5,13 +5,13 @@ MAINTAINER Abhinav Ajgaonkar <abhinav316@gmail.com>
 # Download and extract Cassandra
 RUN \
   mkdir /opt/cassandra; \
-  wget -O - http://www.us.apache.org/dist/cassandra/2.1.5/apache-cassandra-2.1.5-bin.tar.gz \
+  wget -O - http://www.us.apache.org/dist/cassandra/2.1.15/apache-cassandra-2.1.15-bin.tar.gz \
   | tar xzf - --strip-components=1 -C "/opt/cassandra";
 
 # Download and extract DataStax OpsCenter Agent
 RUN \
   mkdir /opt/agent; \
-  wget -O - http://downloads.datastax.com/community/datastax-agent-5.1.0.tar.gz \
+  wget -O - http://downloads.datastax.com/community/datastax-agent-5.2.0.tar.gz \
   | tar xzf - --strip-components=1 -C "/opt/agent";
 
 ADD	. /src
